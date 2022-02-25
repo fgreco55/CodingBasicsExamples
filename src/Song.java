@@ -5,14 +5,23 @@ public class Song {
     int year;
 
     Song(String title, String artist, double price, int year) {
-        this.title = title;
+        this.title = title;             // use "this" to avoid confusion... we want to set the class instance variables
         this.artist = artist;
         this.price = price;
         this.year = year;
     }
+    /*
+     Return twice the price... how much my recordings are worth today!  :)
+     */
     double worth() {
         return price * 2.0;
     }
 
+    /*
+     Just display the contents of this object's values
+     */
+    void show() {
+        System.out.println(title + ":" + artist + ":" + year + ":" + price + ":" + worth());
+    }
 
 }
