@@ -7,6 +7,9 @@ public class FavoriteSong {
     private double priceOfSong;
     private int songYear;
 
+    /*
+     Constructors
+     */
     public FavoriteSong(String firstName, String lastName, String favSong, String favArtist, double priceOfSong, int songYear) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -23,7 +26,7 @@ public class FavoriteSong {
     }
 
     public FavoriteSong(String firstName, String lastName, String favSong) {
-       this(firstName, lastName, favSong, "Unknown", 2.00d, 2000);
+        this(firstName, lastName, favSong, "Unknown", 2.00d, 2000);
         System.out.println("->Inside the fname/lname/fsong constructor.");
     }
 
@@ -32,12 +35,18 @@ public class FavoriteSong {
         System.out.println("->Inside the no argment constructor.");
     }
 
+    /*
+     Quick and dirty display of the instance variables.
+     To be formally correct, I should put "this." in front of every instance variable
+     */
     public void show() {
-        System.out.println("INFO: " + firstName + ":" + lastName + ":" + favSong + ":" + favArtist + ":" + priceOfSong + ":" + songYear);
+        System.out.println("INFO [" + firstName + ":" + lastName + ":"
+                + favSong + ":" + favArtist + ":"
+                + priceOfSong + ":" + songYear + "]");
     }
 
     /*
-     Test this class...
+     Simple test of this class...
      */
     public static void main(String[] args) {
         FavoriteSong fs = new FavoriteSong("frank", "greco");
