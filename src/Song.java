@@ -10,6 +10,13 @@ public class Song {
         this.price = price;
         this.year = year;
     }
+
+    Song() {
+        this.title = "";
+        this.artist = "";
+        this.price = 0.0d;
+        this.year = 1950;
+    }
     /*
      Return twice the price... how much my recordings are worth today!  :)
      */
